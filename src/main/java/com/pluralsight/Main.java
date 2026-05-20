@@ -23,9 +23,12 @@ public class Main {
             System.out.println(person);
         }
 
+        // now this works because Person implements Comparable
+        // Java knows to use our compareTo method to sort by lastName because of the comparable value
+        Collections.sort(myFamily);
 
-        // print the list after sorting attempt
-        System.out.println("\n--- After Sorting ---");
+        // print the list after sorting
+        System.out.println("\n***Sorted By Last Name ***");
         for (Person person : myFamily) {
             System.out.println(person);
         }
