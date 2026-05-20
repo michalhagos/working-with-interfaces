@@ -1,6 +1,7 @@
 package com.pluralsight;
 
-public class Person {
+// Person now implements Comparable<Person>
+public class Person implements Comparable<Person>{
 
     // the first name of the person
     private String firstName;
@@ -42,6 +43,11 @@ public class Person {
     // updates the age of the person
     public void setAge(int age) {
         this.age = age;
+    }
+// to string method to make the information of the person readable
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + " age " + age;
     }
 
 
