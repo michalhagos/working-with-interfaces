@@ -50,5 +50,11 @@ public class Person implements Comparable<Person>{
         return firstName + " " + lastName + " age " + age;
     }
 
+    // this method tells Java how to compare one Person to another
+// we want to sort by last name
 
+    @Override
+    public int compareTo(Person otherPerson) {
+        return this.lastName.compareTo(otherPerson.lastName);
+    }
 }
